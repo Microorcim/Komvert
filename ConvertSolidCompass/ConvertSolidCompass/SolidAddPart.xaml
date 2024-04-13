@@ -1,0 +1,178 @@
+﻿<Window x:Class="ConvertSolidCompass.SolidAddPart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConvertSolidCompass"
+        mc:Ignorable="d"
+        Title="SolidAddPart" Height="450" Width="800" MinHeight="300" MinWidth="430">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition MaxHeight="40"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.ColumnSpan="5">
+            
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Solidworks" Style="{DynamicResource LabelAddHeader}"/>
+
+                <Label Grid.Column="1" Grid.Row="1" Content="Общее" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="2" Content="Образец" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="3" Content="Производитель" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="4" Content="Класс " Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="5" Content="Библиотека" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="6" Content="Тип" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="7" Content="Номер Артикуль " Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="8" Content="Внешний идентификатор" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="9" Content="Серия" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="10" Content="Спецификация" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="11" Content="Корень метки" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="12" Content="Постовщик" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="13" Content="Имя поставщика" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="14" Content="Идентификатор детали для поставщика" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="15" Content="Информация" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="16" Content="Пользователь который изменил" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="17" Content="Дата создания" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="18" Content="Дата изменения" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="19" Content="Количество цепей" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="20" Content="Количество точек подкл" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="21" Content="Иллюстрация" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="22" Content="Структурная схема" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="23" Content="Принципиальная схема" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="24" Content="3D-деталь" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="25" Content="Двухмерные посадочные места" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="26" Content="Метка соединения" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="27" Content="Файл печатной платы" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="28" Content="Размеры" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="29" Content="Ширина" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="30" Content="Высота" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="31" Content="Глубина" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="32" Content="Использовать" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="33" Content="Использовать напряжение" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="34" Content="Использовать частота" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="35" Content="Управление" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="36" Content="Управление напряжение" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="37" Content="Управление частота" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="38" Content="Прочее" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="39" Content="Данные производителя 1" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="40" Content="Данные производителя 2" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="41" Content="Данные производителя 3" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="42" Content="Данные производителя 4" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="43" Content="Данные производителя 5" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="44" Content="Данные производителя 6" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="45" Content="клеммные колодки символ" Style="{DynamicResource Opacity12Label}"/>
+
+                <TextBox Grid.Column="2" Grid.Row="2" Text="{Binding Path=Classification.CreReference}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding Path=Classification.CreManufacturer}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="4" Text="{Binding Path=Classification.CreNodClauid}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="5" Text="{Binding Path=Classification.CreLibName}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="6" Text="{Binding Path=Classification.CreObjecttype}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="7" Text="{Binding Path=Classification.CreArticlename}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="8" Text="{Binding Path=Classification.CreExternalid}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="9" Text="{Binding Path=Classification.CreSerie}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="10" Text="{Binding Path=Classification.CreDatasheet}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="11" Text="{Binding Path=Classification.CreRootmark}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="13" Text="{Binding Path=Classification.CreSuppliername}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="14" Text="{Binding Path=Classification.CreStocknumber}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="16" Text="{Binding Path=Classification.CreModifiedby}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="17" Text="{Binding Path=Classification.CreCreationdate}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="18" Text="{Binding Path=Classification.CreModificationdate}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="19" Text="{Binding Path=Classification.CreElementcount}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="20" Text="{Binding Path=Classification.CreTerminalcount}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="22" Text="{Binding Path=Classification.CreBlosynname}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="23" Text="{Binding Path=Classification.CreBloschname}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="24" Text="{Binding Path=Classification.CrePartname}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="25" Text="{Binding Path=Classification.CrePartnametwod}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="26" Text="{Binding Path=Classification.CreWiringpartname}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="27" Text="{Binding Path=Classification.CrePcbfilename}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="29" Text="{Binding Path=Classification.CreImplantx}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="30" Text="{Binding Path=Classification.CreImplanty}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="31" Text="{Binding Path=Classification.CreImplantz}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="33" Text="{Binding Path=Classification.CreUsevoltage}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="34" Text="{Binding Path=Classification.CreUsefrequency}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="36" Text="{Binding Path=Classification.CreCovoltage}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="37" Text="{Binding Path=Classification.CreCofrequency}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="39" Text="{Binding Path=Classification.CreValue1}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="40" Text="{Binding Path=Classification.CreValue2}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="41" Text="{Binding Path=Classification.CreValue3}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="42" Text="{Binding Path=Classification.CreValue4}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="43" Text="{Binding Path=Classification.CreValue5}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="44" Text="{Binding Path=Classification.CreValue6}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="45" Text="{Binding Path=Classification.CreTerminalstripsymbol}" Style="{DynamicResource NoBorderTextBox}" />
+
+            </Grid>
+    </ScrollViewer>
+
+        <Button x:Name="SaveBt" Grid.Column="1" Grid.Row="1" Content="Сохранить" Style="{DynamicResource ButtonMoving}" Click="SaveBt_Click"/>
+        <Button x:Name="CansleBt" Grid.Column="3" Grid.Row="1" Content="Отменить" Style="{DynamicResource ButtonMoving}" Click="CansleBt_Click"/>
+
+    </Grid>
+</Window>

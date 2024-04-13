@@ -1,0 +1,109 @@
+﻿<Window x:Class="ConvertSolidCompass.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConvertSolidCompass"
+        mc:Ignorable="d"
+        Title="Convert" Height="450" Width="800" MinHeight="350" MinWidth="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7">
+            <MenuItem Header="Конвертирование" Margin="0,0,0,2" Click="Import_Click">
+                <MenuItem Header="Из Solidworks в Компас" Click="SolidToCompass"/>
+                <MenuItem Header="Из Компас в Solidworks" Click="CompassToSolid"/>
+            </MenuItem>
+            <MenuItem Header="Программы" Margin="0,0,0,2" Click="Export_Click">
+                <MenuItem x:Name="BDKMu" Header="Менеджер БДК" Click="BDKMu_Click"/>
+                <MenuItem x:Name="UGOMu" Header="Менеджер Менеджер библиотеки УГО" Click="UGOMu_Click"/>
+                <MenuItem x:Name="FOMu" Header="Менеджер библиотеки форм отчетов" Click="FOMu_Click"/>
+                <MenuItem x:Name="UBDMu" Header="Обновление структуры базы данных" Click="UBDMu_Click"/>
+                <MenuItem x:Name="EBDMu" Header="Экспорт базы данных" Click="EBDMu_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <TreeView Grid.Column="0" Grid.Row="1" Name="TVClasses" ItemsSource="{Binding Path=SolidNodes}" SelectedItemChanged="TVClasses_SelectedItemChanged" BorderThickness="0">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=Childrens}">
+                    <TextBlock Text="{Binding Current.NodTranlatedName}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <GridSplitter Grid.Column="1" Grid.Row="1" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+        <DataGrid Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Path=CatReferences, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=TewCatreference}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick" />
+                    <EventSetter Event="MouseRightButtonUp" Handler="DataGridRow_MouseRightButtonUp"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Образец" Binding="{Binding Path=CreReference}"/>
+                <DataGridTextColumn Header="Серия" Binding="{Binding Path=CreSerie}"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Path=CreManufacturer}"/>
+                <DataGridTextColumn Header="Поставщик" Binding="{Binding Path=CreSuppliername}"/>
+                <DataGridTextColumn Header="Артикль" Binding="{Binding Path=CreArticlename}"/>
+                <DataGridTextColumn Header="Время модификации" Binding="{Binding Path=CreModificationdate, StringFormat=\{0:dd.MM.yy HH:mm:ss\}}"/>
+                <DataGridTextColumn Header="Принципиальная схема" Binding="{Binding Path=CreBloschname}"/>
+                <DataGridTextColumn Header="3Д деталь" Binding="{Binding Path=CrePartname}"/>
+                <DataGridTextColumn Header="Структурная схема" Binding="{Binding Path=CreBlosynname}"/>
+                <DataGridTextColumn Header="Двухмерное посадочное место" Binding="{Binding Path=CrePartnametwod}"/>
+                <DataGridTextColumn Header="Пользователь" Binding="{Binding Path=CreModifiedby}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <GridSplitter Grid.Column="3" Grid.Row="1" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+        <TreeView Grid.Column="4" Grid.Row="1" ItemsSource="{Binding Path=KompassNodes}" SelectedItemChanged="TreeView_SelectedItemChanged" BorderThickness="0">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=Childrens}">
+                    <TextBlock Text="{Binding CurrentName}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <GridSplitter Grid.Column="5" Grid.Row="1" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+        <DataGrid Grid.Column="6" Grid.Row="1" ItemsSource="{Binding Path=Records, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=Record}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick_1" />
+                    <EventSetter Event="MouseRightButtonUp" Handler="DataGridRow_MouseRightButtonUp_1"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Path=Group}"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="ГОСТ" Binding="{Binding Path=Gost}"/>
+                <DataGridTextColumn Header="Обозначение документа" Binding="{Binding Path=DocumentName}"/>
+                <DataGridTextColumn Header="Формат документа" Binding="{Binding Path=DocumentForm}"/>
+                <DataGridTextColumn Header="Вид изделия" Binding="{Binding Path=Kind}"/>
+                <DataGridTextColumn Header="Доступность" Binding="{Binding Path=Available}"/>
+                <DataGridTextColumn Header="ОКП" Binding="{Binding Path=Okp}"/>
+                <DataGridTextColumn Header="Поставщик" Binding="{Binding Path=Supplier}"/>
+                <DataGridTextColumn Header="Масса" Binding="{Binding Path=Mass}"/>
+                <DataGridTextColumn Header="Длина" Binding="{Binding Path=Length}"/>
+                <DataGridTextColumn Header="Ширина" Binding="{Binding Path=Width}"/>
+                <DataGridTextColumn Header="Диаметр" Binding="{Binding Path=Diameter}"/>
+                <DataGridTextColumn Header="Высота" Binding="{Binding Path=Hight}"/>
+                <DataGridTextColumn Header="Цвет" Binding="{Binding Path=ColorInd}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

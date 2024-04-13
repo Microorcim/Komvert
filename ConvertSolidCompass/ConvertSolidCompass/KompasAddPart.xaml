@@ -1,0 +1,114 @@
+﻿<Window x:Class="ConvertSolidCompass.KompasAddPart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConvertSolidCompass"
+        mc:Ignorable="d"
+        Title="KompasAddPart" Height="450" Width="800" MinHeight="300" MinWidth="430" MaxHeight="620">
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition MaxHeight="40"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.ColumnSpan="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+                <RowDefinition Height="30px"/>
+
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Компас" Style="{DynamicResource LabelAddHeader}"/>
+
+
+                <Label Grid.Column="1" Grid.Row="1" Content="Спецификация" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="2" Content="Группа" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="3" Content="Наименование" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="4" Content="ГОСТ" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="5" Content="Обозначение документа" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="6" Content="Формат документа" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="7" Content="Вид изделия" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="8" Content="Доступность" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="9" Content="Покупные данные" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="10" Content="ОКП" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="11" Content="Поставщик" Style="{DynamicResource Opacity12Label}"/>
+
+                <Label Grid.Column="1" Grid.Row="12" Content="Характеристики" Grid.ColumnSpan='2' Style="{DynamicResource Opacity12LabelHeader}"/>
+                <Label Grid.Column="1" Grid.Row="13" Content="Масса" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="14" Content="Длина" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="15" Content="Ширина" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="16" Content="Диаметр" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="17" Content="Высота" Style="{DynamicResource Opacity12Label}"/>
+                <Label Grid.Column="1" Grid.Row="18" Content="Цвет" Style="{DynamicResource Opacity12Label}"/>
+
+                <TextBox Grid.Column="2" Grid.Row="2" Text="{Binding Path=Record.Group}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding Path=Record.Name}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="4" Text="{Binding Path=Record.Gost}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="5" Text="{Binding Path=Record.DocumentName}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="6" Text="{Binding Path=Record.DocumentForm}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="10" Text="{Binding Path=Record.Okp}" Style="{DynamicResource NoBorderTextBox}" />
+                <ComboBox Grid.Column="2" Grid.Row="11" SelectedItem="{Binding Path=Record.Supplier}" ItemsSource="{Binding Path=Suppliers}" DisplayMemberPath="Name" Style="{DynamicResource Combobox}"/>
+                <ComboBox Grid.Column="2" Grid.Row="7" SelectedIndex="{Binding Path=Record.Kind}" Style="{DynamicResource Combobox}">
+                    <ComboBoxItem>Документация</ComboBoxItem>
+                    <ComboBoxItem>Комплексы</ComboBoxItem>
+                    <ComboBoxItem>Сборочные единицы</ComboBoxItem>
+                    <ComboBoxItem>Детали</ComboBoxItem>
+                    <ComboBoxItem>Стандартные изделия</ComboBoxItem>
+                    <ComboBoxItem>Прочие изделия</ComboBoxItem>
+                    <ComboBoxItem>Материалы</ComboBoxItem>
+                    <ComboBoxItem>Комплекты</ComboBoxItem>
+                </ComboBox>
+                <TextBox Grid.Column="2" Grid.Row="13" Text="{Binding Path=Record.Mass}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="8" Text="{Binding Path=Record.Available}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="14" Text="{Binding Path=Record.Length}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="15" Text="{Binding Path=Record.Width}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="16" Text="{Binding Path=Record.Diameter}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="17" Text="{Binding Path=Record.Hight}" Style="{DynamicResource NoBorderTextBox}" />
+                <TextBox Grid.Column="2" Grid.Row="18" Text="{Binding Path=Record.ColorInd}" Style="{DynamicResource NoBorderTextBox}" />
+
+
+            </Grid>
+    </ScrollViewer>
+
+    <Button x:Name="SaveBt" Grid.Column="1" Grid.Row="1" Content="Сохранить" Style="{DynamicResource ButtonMoving}" Click="SaveBt_Click"/>
+        <Button x:Name="CansleBt" Grid.Column="3" Grid.Row="1" Content="Отменить" Style="{DynamicResource ButtonMoving}" Click="CansleBt_Click"/>
+
+    </Grid>
+    
+</Window>
